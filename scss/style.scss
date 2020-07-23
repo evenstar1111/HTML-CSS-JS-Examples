@@ -1,0 +1,43 @@
+@use './modules/reset';
+
+@mixin flex( $d: row, $j: center, $ai: center, $ac: initial) {
+    display: flex;
+    flex-flow: $d wrap;
+    justify-content: $j;
+    align-items: $ai;
+    align-content: $ac;
+}
+
+
+
+.container {
+    @include flex();
+    width: 100%;
+    padding: .5rem;
+    margin: auto;
+    margin-top: 4rem;
+
+    form {
+        width: 100%;
+    }
+
+    section, input, label {
+        width: 100%;
+    }
+
+    .form-control {
+        margin-bottom: .8rem;
+    }
+
+    input {
+        height: 2.2rem;
+        padding-left: .4rem;
+    }
+}
+
+
+@media screen and (min-width: 555px) {
+    .container {
+        max-width: 400px;
+    }
+}

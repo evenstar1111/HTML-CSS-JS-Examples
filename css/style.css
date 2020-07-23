@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: initial;
+  width: 100%;
+  padding: 0.5rem;
+  margin: auto;
+  margin-top: 4rem;
+}
+.container form {
+  width: 100%;
+}
+.container section, .container input, .container label {
+  width: 100%;
+}
+.container .form-control {
+  margin-bottom: 0.8rem;
+}
+.container input {
+  height: 2.2rem;
+  padding-left: 0.4rem;
+}
+
+@media screen and (min-width: 555px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
