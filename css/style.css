@@ -1,8 +1,5 @@
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
   border: none;
@@ -20,18 +17,31 @@ body {
   margin: auto;
   margin-top: 4rem;
 }
-.container form {
-  width: 100%;
-}
-.container section, .container input, .container label {
+.container form, .container section, .container input, .container label {
   width: 100%;
 }
 .container .form-control {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.container label {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-size: 17px;
 }
 .container input {
   height: 2.2rem;
   padding-left: 0.4rem;
+  border: 2px solid #888;
+  border-radius: 5px;
+}
+.container button[type=submit] {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #0068c9;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 555px) {
