@@ -1,0 +1,79 @@
+@use 'sass:map';
+
+@use './modules/reset';
+
+@use './modules/mixins' as *;
+
+$colors: (
+    "primary": #006ce7,
+    "secondary": #888,
+    "accent": #006fd6e5
+);
+
+.container {
+    @include flex();
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 4rem;
+
+
+    form, section, label, input {
+        width: 100%;
+    }
+
+    .form-control {        
+        @include flex($d: column, $j: flex-end);
+        flex-wrap: nowrap;
+        position: relative;
+        height: 62px;
+        margin-bottom: 25px;
+    }
+
+    label {
+        margin-bottom: 2px;
+        font-size: 17px;
+        color: darken(map-get($colors, "secondary"), 15);
+    }
+
+    input {
+        height: 2px;
+        padding-left: .2rem;
+        border-bottom: 2px solid map-get($colors, "secondary");
+        color: map-get($colors, "accent");
+        font-size: 17px;
+        transition: all .3s cubic-bezier(0.55, 0.30, 0.45, 0.70);
+    }
+
+    // input:focus {
+    //     height: 40px;
+    //     border-color: #006ce7;
+    //     color: #006fd6e5;
+    // }
+
+    button {
+        width: 80px;
+        height: 40px;
+        margin-top: 15px;
+        border-radius: 4px;
+        border: 2px solid map-get($colors, "secondary");
+        background-color: white;
+        color: map-get($colors, "secondary");
+        font-size: 17px;
+        cursor: pointer;
+
+        &:hover, &:active {
+            border-color: map-get($colors, "primary");
+            color: map-get($colors, "accent");
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: 520px) {
+    .container {
+        max-width: 420px;
+    }
+}
